@@ -1,0 +1,153 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<wsdl:definitions xmlns:wsap="http://schemas.xmlsoap.org/ws/2004/08/addressing/policy" xmlns:wsa10="http://www.w3.org/2005/08/addressing" xmlns:tns="http://service.bosphorus.com/Hosting" xmlns:msc="http://schemas.microsoft.com/ws/2005/12/wsdl/contract" xmlns:soapenc="http://schemas.xmlsoap.org/soap/encoding/" xmlns:wsp="http://www.w3.org/ns/ws-policy" xmlns:wsam="http://www.w3.org/2007/05/addressing/metadata" xmlns:wsa="http://schemas.xmlsoap.org/ws/2004/08/addressing" xmlns:soap12="http://schemas.xmlsoap.org/wsdl/soap12/" xmlns:wsaw="http://www.w3.org/2006/05/addressing/wsdl" xmlns:soap="http://schemas.xmlsoap.org/wsdl/soap/" xmlns:wsu="http://docs.oasis-open.org/wss/2004/01/oasis-200401-wss-wssecurity-utility-1.0.xsd" xmlns:xsd="http://www.w3.org/2001/XMLSchema" name="DemoService" targetNamespace="http://service.bosphorus.com/Hosting" xmlns:wsdl="http://schemas.xmlsoap.org/wsdl/">
+  <wsdl:types>
+    <xsd:schema targetNamespace="http://service.bosphorus.com/Hosting/Imports">
+      <xsd:import namespace="http://service.bosphorus.com/Hosting" />
+      <xsd:import namespace="http://schemas.microsoft.com/2003/10/Serialization/" />
+      <xsd:import namespace="http://schemas.bosphorus.com/DemoModule" />
+    </xsd:schema>
+  </wsdl:types>
+  <wsdl:message name="DemoServiceContract_GetDateTime_InputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateTime" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_GetDateTime_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GetDateTimeResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_HelloWorld_InputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorld" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_HelloWorld_OutputMessage">
+    <wsdl:part name="parameters" element="tns:HelloWorldResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_Complex_InputMessage">
+    <wsdl:part name="parameters" element="tns:Complex" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_Complex_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ComplexResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_MultipleInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleInput" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_MultipleInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_GenericInput_InputMessage">
+    <wsdl:part name="parameters" element="tns:GenericInput" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_GenericInput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:GenericInputResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_MultipleOutput_InputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleOutput" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_MultipleOutput_OutputMessage">
+    <wsdl:part name="parameters" element="tns:MultipleOutputResponse" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_Throw_InputMessage">
+    <wsdl:part name="parameters" element="tns:Throw" />
+  </wsdl:message>
+  <wsdl:message name="DemoServiceContract_Throw_OutputMessage">
+    <wsdl:part name="parameters" element="tns:ThrowResponse" />
+  </wsdl:message>
+  <wsdl:portType name="DemoServiceContract">
+    <wsdl:operation name="GetDateTime">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/GetDateTime" message="tns:DemoServiceContract_GetDateTime_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/GetDateTimeResponse" message="tns:DemoServiceContract_GetDateTime_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/HelloWorld" message="tns:DemoServiceContract_HelloWorld_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/HelloWorldResponse" message="tns:DemoServiceContract_HelloWorld_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Complex">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/Complex" message="tns:DemoServiceContract_Complex_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/ComplexResponse" message="tns:DemoServiceContract_Complex_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleInput">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/MultipleInput" message="tns:DemoServiceContract_MultipleInput_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/MultipleInputResponse" message="tns:DemoServiceContract_MultipleInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="GenericInput">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/GenericInput" message="tns:DemoServiceContract_GenericInput_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/GenericInputResponse" message="tns:DemoServiceContract_GenericInput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="MultipleOutput">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/MultipleOutput" message="tns:DemoServiceContract_MultipleOutput_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/MultipleOutputResponse" message="tns:DemoServiceContract_MultipleOutput_OutputMessage" />
+    </wsdl:operation>
+    <wsdl:operation name="Throw">
+      <wsdl:input wsam:Action="http://service.bosphorus.com/DemoService/Throw" message="tns:DemoServiceContract_Throw_InputMessage" />
+      <wsdl:output wsam:Action="http://service.bosphorus.com/DemoService/ThrowResponse" message="tns:DemoServiceContract_Throw_OutputMessage" />
+    </wsdl:operation>
+  </wsdl:portType>
+  <wsdl:binding name="BasicHttpBinding_DemoServiceContract" type="tns:DemoServiceContract">
+    <soap:binding transport="http://schemas.xmlsoap.org/soap/http" />
+    <wsdl:operation name="GetDateTime">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/GetDateTime" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="HelloWorld">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/HelloWorld" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Complex">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/Complex" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleInput">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/MultipleInput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="GenericInput">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/GenericInput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="MultipleOutput">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/MultipleOutput" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+    <wsdl:operation name="Throw">
+      <soap:operation soapAction="http://service.bosphorus.com/DemoService/Throw" style="document" />
+      <wsdl:input>
+        <soap:body use="literal" />
+      </wsdl:input>
+      <wsdl:output>
+        <soap:body use="literal" />
+      </wsdl:output>
+    </wsdl:operation>
+  </wsdl:binding>
+  <wsdl:service name="DemoService">
+    <wsdl:port name="BasicHttpBinding_DemoServiceContract" binding="tns:BasicHttpBinding_DemoServiceContract">
+      <soap:address location="http://inttstbosphorus.com:10000/Hosting/DemoService.svc/soap" />
+    </wsdl:port>
+  </wsdl:service>
+</wsdl:definitions>

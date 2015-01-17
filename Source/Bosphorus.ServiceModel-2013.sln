@@ -1,0 +1,92 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 2013
+VisualStudioVersion = 12.0.31101.0
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Projects", "Projects", "{63EB85AE-8FBD-4362-86F3-702DFF2EB312}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Demos", "Demos", "{11E813B5-15D1-4162-853A-DBE4BDAB9DE8}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Default", "Projects\Bosphorus.ServiceModel.Hosting.Default\Bosphorus.ServiceModel.Hosting.Default.csproj", "{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Core", "Projects\Bosphorus.ServiceModel.Hosting.Core\Bosphorus.ServiceModel.Hosting.Core.csproj", "{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Model", "Projects\Bosphorus.ServiceModel.Hosting.Model\Bosphorus.ServiceModel.Hosting.Model.csproj", "{B50AF1BC-3373-4118-BB04-797EBD689172}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Demo.ConsoleHost", "Demos\Bosphorus.ServiceModel.Hosting.Demo.ConsoleHost\Bosphorus.ServiceModel.Hosting.Demo.ConsoleHost.csproj", "{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Demo.PocoService", "Demos\Bosphorus.ServiceModel.Hosting.Demo.PocoService\Bosphorus.ServiceModel.Hosting.Demo.PocoService.csproj", "{BF20C0BA-9A12-4B4C-BB68-273721993D50}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Demo.Client", "Demos\Bosphorus.ServiceModel.Hosting.Demo.Client\Bosphorus.ServiceModel.Hosting.Demo.Client.csproj", "{9721B5B8-7497-4F72-990D-0207AE93883F}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Activation", "Projects\Bosphorus.ServiceModel.Hosting.Activation\Bosphorus.ServiceModel.Hosting.Activation.csproj", "{1C77C2EB-57C9-4843-9C4D-7F4BA01D8B48}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Logging", "Projects\Bosphorus.ServiceModel.Hosting.Logging\Bosphorus.ServiceModel.Hosting.Logging.csproj", "{67B8AB15-D32A-4197-A588-22CD96B53499}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Security", "Projects\Bosphorus.ServiceModel.Hosting.Security\Bosphorus.ServiceModel.Hosting.Security.csproj", "{A898275D-F9A8-48E9-958F-F3870F81F664}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Bosphorus.ServiceModel.Hosting.Aspect", "Projects\Bosphorus.ServiceModel.Hosting.Aspect\Bosphorus.ServiceModel.Hosting.Aspect.csproj", "{A0DF2002-5B50-4BE6-AD41-000872A5CE06}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B50AF1BC-3373-4118-BB04-797EBD689172}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B50AF1BC-3373-4118-BB04-797EBD689172}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B50AF1BC-3373-4118-BB04-797EBD689172}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B50AF1BC-3373-4118-BB04-797EBD689172}.Release|Any CPU.Build.0 = Release|Any CPU
+		{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB}.Release|Any CPU.Build.0 = Release|Any CPU
+		{BF20C0BA-9A12-4B4C-BB68-273721993D50}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{BF20C0BA-9A12-4B4C-BB68-273721993D50}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{BF20C0BA-9A12-4B4C-BB68-273721993D50}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{BF20C0BA-9A12-4B4C-BB68-273721993D50}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9721B5B8-7497-4F72-990D-0207AE93883F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9721B5B8-7497-4F72-990D-0207AE93883F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9721B5B8-7497-4F72-990D-0207AE93883F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9721B5B8-7497-4F72-990D-0207AE93883F}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1C77C2EB-57C9-4843-9C4D-7F4BA01D8B48}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1C77C2EB-57C9-4843-9C4D-7F4BA01D8B48}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1C77C2EB-57C9-4843-9C4D-7F4BA01D8B48}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1C77C2EB-57C9-4843-9C4D-7F4BA01D8B48}.Release|Any CPU.Build.0 = Release|Any CPU
+		{67B8AB15-D32A-4197-A588-22CD96B53499}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{67B8AB15-D32A-4197-A588-22CD96B53499}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{67B8AB15-D32A-4197-A588-22CD96B53499}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{67B8AB15-D32A-4197-A588-22CD96B53499}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A898275D-F9A8-48E9-958F-F3870F81F664}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A898275D-F9A8-48E9-958F-F3870F81F664}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A898275D-F9A8-48E9-958F-F3870F81F664}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A898275D-F9A8-48E9-958F-F3870F81F664}.Release|Any CPU.Build.0 = Release|Any CPU
+		{A0DF2002-5B50-4BE6-AD41-000872A5CE06}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{A0DF2002-5B50-4BE6-AD41-000872A5CE06}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{A0DF2002-5B50-4BE6-AD41-000872A5CE06}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{A0DF2002-5B50-4BE6-AD41-000872A5CE06}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+		{A01B2D63-ADDA-462E-83A0-58ECBA6ED739} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+		{B50AF1BC-3373-4118-BB04-797EBD689172} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+		{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB} = {11E813B5-15D1-4162-853A-DBE4BDAB9DE8}
+		{BF20C0BA-9A12-4B4C-BB68-273721993D50} = {11E813B5-15D1-4162-853A-DBE4BDAB9DE8}
+		{9721B5B8-7497-4F72-990D-0207AE93883F} = {11E813B5-15D1-4162-853A-DBE4BDAB9DE8}
+		{1C77C2EB-57C9-4843-9C4D-7F4BA01D8B48} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+		{67B8AB15-D32A-4197-A588-22CD96B53499} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+		{A898275D-F9A8-48E9-958F-F3870F81F664} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+		{A0DF2002-5B50-4BE6-AD41-000872A5CE06} = {63EB85AE-8FBD-4362-86F3-702DFF2EB312}
+	EndGlobalSection
+EndGlobal

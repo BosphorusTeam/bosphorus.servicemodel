@@ -1,0 +1,127 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{5FD1ECEC-33D9-4F2B-A9C6-5FF58258B6BB}</ProjectGuid>
+    <OutputType>Exe</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bosphorus.ServiceModel.Hosting.Demo.ConsoleHost</RootNamespace>
+    <AssemblyName>Bosphorus.ServiceModel.Hosting.Demo.ConsoleHost</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <PlatformTarget>AnyCPU</PlatformTarget>
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bosphorus.BootStapper, Version=1.1.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.BootStapper.1.1.0.16\lib\net45\Bosphorus.BootStapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Common.Clr, Version=1.0.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Common.Clr.1.0.0.16\lib\net45\Bosphorus.Common.Clr.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Configuration.Core, Version=1.0.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Configuration.Core.1.0.0.24\lib\net45\Bosphorus.Configuration.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Configuration.Default, Version=1.0.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Configuration.Default.1.0.0.24\lib\net45\Bosphorus.Configuration.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.34, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.34\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Dao.Core, Version=2.1.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Dao.Core.2.1.0.29\lib\net45\Bosphorus.Dao.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Serialization.Core, Version=1.1.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Serialization.Core.1.1.0.6\lib\net45\Bosphorus.Serialization.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Serialization.Default, Version=1.1.0.6, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Serialization.Default.1.1.0.6\lib\net45\Bosphorus.Serialization.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="BindingSchemePortMapProvider.cs" />
+    <Compile Include="FakeAuthenticationProvider.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="Program.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Core\Bosphorus.ServiceModel.Hosting.Core.csproj">
+      <Project>{a01b2d63-adda-462e-83a0-58ecba6ed739}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Default\Bosphorus.ServiceModel.Hosting.Default.csproj">
+      <Project>{092bb31a-f4c4-4855-89d5-e7c06adffab1}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Default</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Logging\Bosphorus.ServiceModel.Hosting.Logging.csproj">
+      <Project>{67b8ab15-d32a-4197-a588-22cd96b53499}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Logging</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Model\Bosphorus.ServiceModel.Hosting.Model.csproj">
+      <Project>{B50AF1BC-3373-4118-BB04-797EBD689172}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Model</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Security\Bosphorus.ServiceModel.Hosting.Security.csproj">
+      <Project>{a898275d-f9a8-48e9-958f-f3870f81f664}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Security</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bosphorus.ServiceModel.Hosting.Demo.PocoService\Bosphorus.ServiceModel.Hosting.Demo.PocoService.csproj">
+      <Project>{BF20C0BA-9A12-4B4C-BB68-273721993D50}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Demo.PocoService</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

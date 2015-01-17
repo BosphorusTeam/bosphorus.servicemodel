@@ -1,0 +1,174 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{092BB31A-F4C4-4855-89D5-E7C06ADFFAB1}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bosphorus.ServiceModel.Hosting.Default</RootNamespace>
+    <AssemblyName>Bosphorus.ServiceModel.Hosting.Default</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bosphorus.BootStapper, Version=1.1.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.BootStapper.1.1.0.16\lib\net45\Bosphorus.BootStapper.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Common.Clr, Version=1.0.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Common.Clr.1.0.0.16\lib\net45\Bosphorus.Common.Clr.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Configuration.Core, Version=1.0.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Configuration.Core.1.0.0.24\lib\net45\Bosphorus.Configuration.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Configuration.Default, Version=1.0.0.24, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Configuration.Default.1.0.0.24\lib\net45\Bosphorus.Configuration.Default.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.34, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.34\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Dao.Core, Version=2.1.0.29, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Dao.Core.2.1.0.29\lib\net45\Bosphorus.Dao.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addressing\Endpoint\Installer.cs" />
+    <Compile Include="Addressing\Naming\DefaultApplicationNameExtractor.cs" />
+    <Compile Include="Addressing\Port\AbstractBindingSchemePortProvider.cs" />
+    <Compile Include="Addressing\Endpoint\DefaultEndpointAddressBuilder.cs" />
+    <Compile Include="Addressing\Naming\DefaultServiceNamespaceBuilder.cs" />
+    <Compile Include="Addressing\DefaultUriBuilder.cs" />
+    <Compile Include="Addressing\Naming\IApplicationNameExtractor.cs" />
+    <Compile Include="Addressing\Port\IBindingSchemePortProvider.cs" />
+    <Compile Include="Addressing\Endpoint\IEndpointAddressSuffixProvider.cs" />
+    <Compile Include="Addressing\Installer.cs" />
+    <Compile Include="Addressing\Naming\Installer.cs" />
+    <Compile Include="Addressing\Naming\IServiceNamespaceBuilder.cs" />
+    <Compile Include="Addressing\Endpoint\ProtocolSpecificAddressSuffixProvider.cs" />
+    <Compile Include="Addressing\Port\Installer.cs" />
+    <Compile Include="Channels\AbstractBindingProvider.cs" />
+    <Compile Include="Channels\BasicHttpBindingProvider.cs" />
+    <Compile Include="Channels\BasicHttpsBindingProvider.cs" />
+    <Compile Include="Channels\ConditionalBindingProvider.cs" />
+    <Compile Include="Channels\IBindingProvider.cs" />
+    <Compile Include="Channels\Installer.cs" />
+    <Compile Include="Channels\NetTcpBindingProvider.cs" />
+    <Compile Include="Channels\WebHttpBindingProvider.cs" />
+    <Compile Include="Channels\WebHttpsBindingProvider.cs" />
+    <Compile Include="Configuration\DefaultServiceConfigurationRepository.cs" />
+    <Compile Include="Configuration\HostingConfiguration.cs" />
+    <Compile Include="Configuration\Installer.cs" />
+    <Compile Include="Description\Contract\BehaviorEnrichmentDecorator.cs" />
+    <Compile Include="Description\Contract\BehaviorProvider\IContractBehaviorProvider.cs" />
+    <Compile Include="Description\Contract\BehaviorProvider\Installer.cs" />
+    <Compile Include="Description\Contract\IContractDescriptionProvider.cs" />
+    <Compile Include="Description\Contract\Installer.cs" />
+    <Compile Include="Description\Endpoint\BehaviorProvider\AbstractDispatchMessageInspector.cs" />
+    <Compile Include="Description\Endpoint\BehaviorProvider\Installer.cs" />
+    <Compile Include="Description\Endpoint\BehaviorProvider\WebHttp.cs" />
+    <Compile Include="Description\Operation\BehaviorEnrichmentDecorator.cs" />
+    <Compile Include="Description\Operation\BehaviorProvider\CustomOperationInvoker.cs" />
+    <Compile Include="Description\Operation\BehaviorProvider\DataContractSerializer.cs" />
+    <Compile Include="Description\Operation\BehaviorProvider\Installer.cs" />
+    <Compile Include="Description\Operation\BehaviorProvider\Operation.cs" />
+    <Compile Include="Description\Operation\BehaviorProvider\WebInvoke.cs" />
+    <Compile Include="Description\Operation\CustomOperationInvokerBehavior.cs" />
+    <Compile Include="Description\Operation\Installer.cs" />
+    <Compile Include="Description\Operation\BehaviorProvider\IOperationBehaviorProvider.cs" />
+    <Compile Include="Description\Operation\IOperationDescriptionProvider.cs" />
+    <Compile Include="Description\Operation\PocoServiceOperationDescriptionProvider.cs" />
+    <Compile Include="Description\Contract\PocoServiceContractDescriptionProvider.cs" />
+    <Compile Include="Description\Endpoint\BehaviorEnrichmentDecorator.cs" />
+    <Compile Include="Description\Endpoint\DefaultServiceEndpointProvider.cs" />
+    <Compile Include="Addressing\Endpoint\IEndpointAddressBuilder.cs" />
+    <Compile Include="Description\Endpoint\BehaviorProvider\IEndpointBehaviorProvider.cs" />
+    <Compile Include="Description\Endpoint\Installer.cs" />
+    <Compile Include="Description\Endpoint\IServiceEndpointProvider.cs" />
+    <Compile Include="Description\Message\Action\IMessageActionProvider.cs" />
+    <Compile Include="Description\Message\Action\InputMessageActionProvider.cs" />
+    <Compile Include="Description\Message\Action\Installer.cs" />
+    <Compile Include="Description\Message\Action\OutputMessageActionProvider.cs" />
+    <Compile Include="Description\Message\CompositeMessageDescriptionProvider.cs" />
+    <Compile Include="Description\Message\IMessageDescriptionProvider.cs" />
+    <Compile Include="Description\Message\InputMessageDescriptionProvider.cs" />
+    <Compile Include="Description\Message\Installer.cs" />
+    <Compile Include="Description\Message\OutputMessageDescriptionProvider.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\AbstractDispatchMessageInspector.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\Debug.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\DispatchMessageInspector.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\ErrorHandler.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\Installer.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\IServiceBehaviorProvider.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\ServerMessageLogger.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\ServiceMetadata.cs" />
+    <Compile Include="Description\Service\BehaviorProvider\ServiceRegistryInstanceProvider.cs" />
+    <Compile Include="Dispatcher\PocoServiceOperationInvoker.cs" />
+    <Compile Include="MetadataExchangeEndpointEnrichmentDecorator.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="PocoServiceHost.cs" />
+    <Compile Include="PocoServiceHostProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceBehaviorEnrichmentDecorator.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bosphorus.ServiceModel.Hosting.Core\Bosphorus.ServiceModel.Hosting.Core.csproj">
+      <Project>{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Bosphorus.ServiceModel.Hosting.Model\Bosphorus.ServiceModel.Hosting.Model.csproj">
+      <Project>{B50AF1BC-3373-4118-BB04-797EBD689172}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

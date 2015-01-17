@@ -1,0 +1,111 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{BF20C0BA-9A12-4B4C-BB68-273721993D50}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bosphorus.ServiceModel.Hosting.Demo.PocoService</RootNamespace>
+    <AssemblyName>Bosphorus.ServiceModel.Hosting.Demo.PocoService</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bosphorus.Aspect.Core">
+      <HintPath>..\..\packages\Bosphorus.Aspect.Core.1.0.0.4\lib\net45\Bosphorus.Aspect.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Aspect.Exception, Version=1.0.0.4, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Aspect.Exception.1.0.0.4\lib\net45\Bosphorus.Aspect.Exception.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Common.Clr, Version=1.0.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Common.Clr.1.0.0.16\lib\net45\Bosphorus.Common.Clr.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Common.Core">
+      <HintPath>..\..\packages\Bosphorus.Common.Core.1.0.0.16\lib\net45\Bosphorus.Common.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.34, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.34\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Customer.cs" />
+    <Compile Include="DemoServiceAspectApplier.cs" />
+    <Compile Include="DemoServiceConfigurationProvider.cs" />
+    <Compile Include="ErrorModel.cs" />
+    <Compile Include="FixedHttpStatusCodeProvider.cs" />
+    <Compile Include="Identifiable.cs" />
+    <Compile Include="Installer.cs" />
+    <Compile Include="Point.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="DemoService.cs" />
+    <Compile Include="ValidationException.cs" />
+    <Compile Include="ValidationExceptionWebFaultConverter.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Aspect\Bosphorus.ServiceModel.Hosting.Aspect.csproj">
+      <Project>{A0DF2002-5B50-4BE6-AD41-000872A5CE06}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Aspect</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Core\Bosphorus.ServiceModel.Hosting.Core.csproj">
+      <Project>{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Core</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Default\Bosphorus.ServiceModel.Hosting.Default.csproj">
+      <Project>{092bb31a-f4c4-4855-89d5-e7c06adffab1}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Default</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\..\Projects\Bosphorus.ServiceModel.Hosting.Model\Bosphorus.ServiceModel.Hosting.Model.csproj">
+      <Project>{B50AF1BC-3373-4118-BB04-797EBD689172}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

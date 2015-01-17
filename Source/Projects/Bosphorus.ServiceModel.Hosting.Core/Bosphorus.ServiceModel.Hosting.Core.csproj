@@ -1,0 +1,118 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{A01B2D63-ADDA-462E-83A0-58ECBA6ED739}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>Bosphorus.ServiceModel.Hosting.Hosting.Core</RootNamespace>
+    <AssemblyName>Bosphorus.ServiceModel.Hosting.Hosting.Core</AssemblyName>
+    <TargetFrameworkVersion>v4.5</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Bosphorus.Common.Clr, Version=1.0.0.16, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Common.Clr.1.0.0.16\lib\net45\Bosphorus.Common.Clr.dll</HintPath>
+    </Reference>
+    <Reference Include="Bosphorus.Container.Castle, Version=1.1.0.34, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
+      <HintPath>..\..\packages\Bosphorus.Container.Castle.1.1.0.34\lib\net45\Bosphorus.Container.Castle.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Core">
+      <HintPath>..\..\packages\Castle.Core.3.2.2\lib\net45\Castle.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Castle.Windsor">
+      <HintPath>..\..\packages\Castle.Windsor.3.2.1\lib\net45\Castle.Windsor.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Runtime.Serialization" />
+    <Reference Include="System.ServiceModel" />
+    <Reference Include="System.ServiceModel.Channels" />
+    <Reference Include="System.ServiceModel.Web" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Addressing\IUriBuilder.cs" />
+    <Compile Include="Addressing\UriBuilderExtensions.cs" />
+    <Compile Include="Configuration\AbstractServiceConfigurationProvider.cs" />
+    <Compile Include="Configuration\CompositeServiceConfigurationProvider.cs" />
+    <Compile Include="Configuration\Installer.cs" />
+    <Compile Include="Configuration\IServiceConfigurationProvider.cs" />
+    <Compile Include="Configuration\IServiceConfigurationRepository.cs" />
+    <Compile Include="Description\Contract\CompositeContractBehavior.cs" />
+    <Compile Include="Description\Endpoint\CompositeEndpointBehavior.cs" />
+    <Compile Include="Description\Endpoint\DispatchMessageInspectorBehavior.cs" />
+    <Compile Include="Description\Endpoint\DispatchMessageInspector\MessageLogging\IServerMessageLoggerProvider.cs" />
+    <Compile Include="Description\Endpoint\DispatchMessageInspector\MessageLogging\ServerMessageLoggerProvider.cs" />
+    <Compile Include="Description\Endpoint\GenericDispatchMessageInspectorBehavior.cs" />
+    <Compile Include="Description\Service\DispatchMessageInspector\MessageLogging\IServerMessageLoggerProvider.cs" />
+    <Compile Include="Description\Service\GenericDispatchMessageInspectorBehavior.cs" />
+    <Compile Include="Description\Endpoint\DispatchMessageInspector\IDispatchMessageInspectorProvider.cs" />
+    <Compile Include="Description\Endpoint\DispatchMessageInspector\Installer.cs" />
+    <Compile Include="Description\Operation\CompositeOperationBehavior.cs" />
+    <Compile Include="Description\Service\CompositeServiceBehavior.cs" />
+    <Compile Include="Description\Service\DispatchMessageInspectorBehavior.cs" />
+    <Compile Include="Description\Service\DispatchMessageInspector\Installer.cs" />
+    <Compile Include="Dispatcher\MessageLogger\IServerMessageLogger.cs" />
+    <Compile Include="Description\Service\DispatchMessageInspector\MessageLogging\ServerMessageLoggerProvider.cs" />
+    <Compile Include="Description\Service\ErrorHandlerBehavior.cs" />
+    <Compile Include="Description\Service\ErrorHandler\FaultProvider.cs" />
+    <Compile Include="Description\Service\ErrorHandler\Installer.cs" />
+    <Compile Include="Description\Service\ErrorHandler\IErrorHandlerProvider.cs" />
+    <Compile Include="Description\Service\DispatchMessageInspector\IDispatchMessageInspectorProvider.cs" />
+    <Compile Include="Dispatcher\FaultProvider\WebFaultProvider.cs" />
+    <Compile Include="Dispatcher\FaultProvider\IFaultProvider.cs" />
+    <Compile Include="Dispatcher\FaultProvider\Installer.cs" />
+    <Compile Include="Dispatcher\FaultProviderErrorHandler.cs" />
+    <Compile Include="Dispatcher\ServerMessageLogger.cs" />
+    <Compile Include="Dispatcher\MessageLogger\Installer.cs" />
+    <Compile Include="IServiceHostProvider.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="ServiceHostBaseExtensions.cs" />
+    <Compile Include="Dispatcher\ServiceRegistryInstanceProvider.cs" />
+    <Compile Include="Description\Service\ServiceRegistryInstanceProviderBehavior.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Bosphorus.ServiceModel.Hosting.Model\Bosphorus.ServiceModel.Hosting.Model.csproj">
+      <Project>{B50AF1BC-3373-4118-BB04-797EBD689172}</Project>
+      <Name>Bosphorus.ServiceModel.Hosting.Hosting.Model</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="packages.config" />
+  </ItemGroup>
+  <ItemGroup />
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>

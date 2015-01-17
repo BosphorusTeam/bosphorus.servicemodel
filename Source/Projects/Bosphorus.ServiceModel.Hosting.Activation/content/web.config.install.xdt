@@ -1,0 +1,6 @@
+﻿<?xml version="1.0"?>
+<configuration xmlns:xdt="http://schemas.microsoft.com/XML-Document-Transform">
+  <appSettings>
+    <add key="ServiceModel.Hosting.ServiceModel.Hosting.ServiceGroupAlias" value="Default" xdt:Transform="Insert"/>
+  </appSettings>
+</configuration>
